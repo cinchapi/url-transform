@@ -1,0 +1,29 @@
+{
+  "name": "url-transform",
+  "version": "1.0.0",
+  "description": "A module to transform URLs",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cinchapi/url-transform.git"
+  },
+  "keywords": [
+    "URL",
+    "parser",
+    "uri",
+    "url",
+    "parse",
+    "query",
+    "string",
+    "querystring",
+    "stringify"
+  ],
+  "author": "Jeff Nelson",
+  "license": "Apache 2.0",
+  "dependencies": {
+    "url-parse": "~1.2.0"
+  }
+}
