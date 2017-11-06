@@ -9,7 +9,7 @@ npm install url-transform
 
 ## Usage
 All examples assume the module is bootstrapped using:
-```bash
+```javascript
 'use strict'
 
 var transform = require('url-transform');
