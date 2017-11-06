@@ -7,9 +7,9 @@ This module is based on [url-parse](https://github.com/unshiftio/url-parse) and 
 npm install @cinchapi/url-transform
 ```
 You can also declare the dependency in the `package.json` file
-```
+```node
 "dependencies": {
-    "@cinchapi/url-transform": "^1.0.0"
+  "@cinchapi/url-transform": "^1.0.0"
 }
 ```
 
