@@ -1,3 +1,19 @@
+/*
+ * Copyright (c) 2017 Cinchapi Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 'use strict';
 
 var parse = require('url-parse');
@@ -8,7 +24,27 @@ separators["pathname"] = "/";
 separators["query"] = "&";
 
 /**
- *
+ * Transform a URL based on a specified pattern, using variable substition.
+ * <p>
+ * <h2>Variable Patterns</h2>
+ * <ul>
+ * <li>$variable</li> - Selects the entire variable from the URL.
+ * <li>$variable(start)</li> - Selects all the components of the variable from the URL, starting at index {@code start}.
+ * <li>$variable(start,end)</li> - Selects the components of the variables from the URL, starting at index {@code start} and ending with {@code end} (both inclusive).
+ * </ul>
+ * </p>
+ * <h2>Variables</h2>
+ * Generally speaking, variables made availabe via the url-parse library can be
+ * added to the pattern using the rules specified above. There is explicit support for
+ * <ul>
+ * <li>hostname</li> - host name without port number
+ * <li>pathname</li> - URL path
+ * </ul>
+ * </p>
+ * <p>
+ * <h2>Variable Components<h2>
+ * Some variables can be referenced by indivdual components. For example, the hostname can be selected in its entirety or granularly by specifying specific parts of the hostname using the "." as a separator. 
+ * </p>
  */
 function transform(url, pattern) {
   var components = parse(url, true)
