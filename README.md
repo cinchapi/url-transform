@@ -6,6 +6,12 @@ This module is based on [url-parse](https://github.com/unshiftio/url-parse) and 
 ```bash
 npm install @cinchapi/url-transform
 ```
+You can also declare the dependency in the `package.json` file
+```
+"dependencies": {
+    "@cinchapi/url-transform": "^1.0.0"
+}
+```
 
 ## Usage
 All examples assume the module is bootstrapped using:
