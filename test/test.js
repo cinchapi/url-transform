@@ -59,4 +59,11 @@ describe('url-transform', function() {
     assume(transformed).equals("https://account.staging.cinchapi.com/analyze/app.staging.cinchapi.engineering");
   });
 
+  it('can work with localhost URLs', function() {
+    var url = "http://localhost:32478/analyze/name,%20email,%20company,%20phone_number,%20age,%20job_title,%20salary,%20years_employed,%20friends%20WHERE%20salary%20%3E%201"
+    var pattern = "http://account.$hostname";
+    var transformed = transform(url, pattern);
+    assume(transformed).equals('http://account.localhost');
+  });
+
 });
