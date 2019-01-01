@@ -18,10 +18,11 @@
 
 var parse = require('url-parse');
 
-var separators = new Object();
-separators["hostname"] = ".";
-separators["pathname"] = "/";
-separators["query"] = "&";
+var separators = {
+  hostname: '.',
+  pathname: '/',
+  query: '&'
+};
 
 /**
  * Transform a URL based on a specified pattern, using variable substition.
